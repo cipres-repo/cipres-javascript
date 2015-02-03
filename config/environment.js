@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'cipress-ember',
+    modulePrefix: 'cipres-ember',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

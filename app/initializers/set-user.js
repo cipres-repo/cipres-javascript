@@ -6,7 +6,7 @@ export default {
     var User = Ember.Object.extend({
       username: null,
       auth: null,
-      appKey: "YOUR APP KEY"
+      appKey: "YOUR APPLICATION ID"
     });
     application.register('session:current', User, {singleton: true});
     application.inject('route', 'session', 'session:current');
