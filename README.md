@@ -11,7 +11,7 @@ for XML data parsing, as well as the [Bootstrap CSS Framework](http://getbootstr
 The application allows users to create, list, and view information for jobs using the
 CIPRES REST API. Unfortunately, due to the limitations of JavaScript, the application does not allow
 for downloading of outputted files. However, this can be remedied through proper server-side
- scripting. [End user documentation](doc/end_user_documentation.md) can be found in the `docs` directory.
+ scripting. [End user documentation](docs/end_user_documentation.md) can be found in the `docs` directory.
 
 ## Prerequisites
 

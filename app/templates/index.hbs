@@ -1,9 +1,42 @@
 <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2">
-	<h2 class="page-header">Index Page</h2>
-		{{#if session.username}}
-			<h3>Welcome {{session.username}}!</h3>
-		{{else}}
-			Please login
-		{{/if}}
+<h2>Cipres Ember User Documentation</h2>
+
+Refer to this documenation for information regarding the use of this web application.
+
+<h3>Logging In</h3>
+<p>
+At the index page, enter your CIPRES REST API username and password in fields located 
+in the upper right corner. Once you have logged on, you will be able to access 
+the application's core features. 
+</p>
+<p class="text-muted">
+Note: Credentials are not persisted and are stored in memory for the duration of the application. 
+As a result, you will need to reenter your credentials each time you open the application.
+</p>
+
+<h3>Logging Out</h3>
+<p>
+After logging in, you may log out by clicking the 'Logout' button located in the upper right corner.
+</p>
+
+<h3>Listing Submitted Jobs</h3>
+<p>
+Navigate to the 'My Jobs' page using the navigation bar on the leftmost side of the application window.
+You should now be able to see all of your submitted jobs listed by their selfUri titles. To view more information for a specific job, 
+simply hover over its title and click. You should now be able to see the values for different job properties as well as view the URLs 
+of output files once the job has completed. 
+</p>
+<p class="text-muted">
+Note: Currently, the application does not support downloading of output files. More information can be found
+in the <a href="https://github.com/robreys/cipres-ember.git" target="_blank">Cipres Ember Repository</a> README.
+</p>
+
+<h3>Creating A Job</h3>
+<p>
+Navigate to the 'New Job' page using the navigation bar on the leftmost side of the application window. You should now be able to see 
+a form requesting information for job creation. Fields under Basic Information must be completed while fields under Optional Information 
+are not required. Once the form has been completed, you may submit your job request by clicking the Submit button at the bottom of the page. 
+Upon successful submission, a green box above the form will alert you of your job creation.
+</p>
 
 </div>
