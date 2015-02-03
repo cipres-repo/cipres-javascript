@@ -7,14 +7,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">CIPRES Ember</a>
+      <a class="navbar-brand" href="#">CIPRES Workbench</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class='active'><a href="#">Workbench</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
+        <form class="navbar-form navbar-right">
+          {{#unless session.username}}
+            <div class="form-group">
+              {{input type="text" value=sessionControl.username class="form-control" placeholder="username"}}
+            </div>
+            <div class="form-group">
+              {{input type="password" value=sessionControl.password class="form-control" placeholder="password"}}
+            </div>
+            <button {{action "login"}} type="submit" class="btn btn-success">Login</button>
+          {{else}}
+            <button {{action "logout"}} type="submit" class="btn btn-warning">Logout</button>
+          {{/unless}}
+        </form>
+        {{#if session.username}}
+          <div class="navbar-right">
+            <p class="navbar-text">Signed in as {{session.username}}</p>
+          </div>
+        {{/if}}
     </div>
   </div>
 </nav>
@@ -23,7 +36,7 @@
     <div class="col-sm-2 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
           {{#link-to "index" tagName="li" href=false}}{{#link-to 'index'}}Home{{/link-to}}{{/link-to}}
-          {{#if session.user}}
+          {{#if session.username}}
             {{#link-to 'job.list' tagName="li" href=false}}{{#link-to 'job.list'}}My Jobs{{/link-to}}{{/link-to}}
             {{#link-to 'job.create' tagName="li" href=false}}{{#link-to 'job.create'}}New Job{{/link-to}}{{/link-to}}
           {{/if}}
@@ -33,5 +46,4 @@
   	{{outlet}}
 
 	</div>
-  <a class="download"></a>
 </div>

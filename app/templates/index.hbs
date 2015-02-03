@@ -1,0 +1,9 @@
+<div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2">
+	<h2 class="page-header">Index Page</h2>
+		{{#if session.username}}
+			<h3>Welcome {{session.username}}!</h3>
+		{{else}}
+			Please login
+		{{/if}}
+
+</div>

@@ -1,0 +1,53 @@
+<div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2">
+  <h2 class="page-header">Submit a Job</h2>
+  {{#if alert}}
+  	<div class="alert alert-success" role="alert">{{alert}}</div>
+  {{/if}}
+	<form role="form" id="job-submission">
+		<div class="well well-lg">
+			<h3>Basic Information</h3>
+		  <div class="form-group">
+		    <label >Job type</label>
+		    {{view "Ember.Select" content=tools classNames="form-control" value=formAttr.tool}}
+		  </div>
+		  <div class="form-group">
+		    <label>Input file</label>
+		    <input type="file" name="input.infile_">
+		  </div>
+		</div>
+		<div class="well well-lg">
+		  <h3>Optional Information</h3>
+		  <div class="form-group">
+		    <label>Job Name</label>
+		    {{input type="text" class="form-control" value=formAttr.metadata.clientJobName}}
+		    <p class="help-block">A name that the user of your application will recognize the job by.</p>
+		  </div>
+		  <div class="form-group">
+		    <label>Tool Name</label>
+		    {{input type="text" class="form-control" value=formAttr.metadata.clientToolName}}
+		    <p class="help-block">A name that the user will recognize the tool by.</p>
+		  </div>
+		  <div class="form-group">
+		    <label>Runtime</label>
+		    {{input type="text" class="form-control" value=formAttr.vparam.runtime_}}
+		    <p class="help-block">Configures the maximum time your job will need to run (up to 72 hrs).</p>
+		  </div>
+		  <div class="form-group">
+		    <label>Status Email</label>
+		    <p class="help-block">
+					{{input type="checkbox" checked=formAttr.metadata.statusEmail}}
+		    	Check this box to receive an email on job completion.
+		    </p>
+		  </div>
+		  {{#if formAttr.metadata.statusEmail}}
+			  <div class="form-group">
+			    <label>Email Destination</label>
+			    {{input type="email" class="form-control" value=formAttr.metadata.emailAddress}}
+			    <p class="help-block">Use this to override the default email destination.</p>
+			  </div>
+			{{/if}}
+		</div>
+	  <button {{action "submitJob"}} class="btn btn-default">Submit</button>
+	</form>
+</div>
+ 

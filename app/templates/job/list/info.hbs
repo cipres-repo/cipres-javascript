@@ -1,0 +1,77 @@
+<h2 class="page-header">Job Information</h2>
+<h5>{{selfuri.title}}</h5>
+
+<div class="table-responsive">
+<h6>Properties</h6>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each properties}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{value}}</td>
+        </tr>
+      {{/each}}
+      {{#each metadata}}
+          <tr>
+            <td>{{key}}</td>
+            <td>{{value}}</td>
+          </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<div class="table-responsive">
+<h6>Files</h6>
+  <table class="table table-striped">
+    <thead>
+      {{#if resultsuri}}
+        <tr>
+          <th>Results: Filename</th>
+          <th>Download Link</th>
+        </tr>
+      {{else}}
+        {{#if workingdiruri}}
+          <tr>
+            <th>Working Directory: Filename</th>
+            <th>Download Link</th>
+          </tr>
+        {{/if}}     
+      {{/if}}
+    </thead>
+    <tbody>
+      {{#each files}}
+        <tr>
+          <td>{{filename}}</td>
+          <td>{{download}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<div class="table-responsive">
+<h6>Messages</h6>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Stage</th>
+        <th>Message</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each messages}}
+        <tr>
+          <td>{{stage}}</td>
+          <td>{{text}}</td>
+          <td>{{timestamp}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

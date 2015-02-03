@@ -6,7 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.route('sample');
 	this.resource('job', function() {
 		this.route('list', function() {
 			this.route('info', {path: '/info/:id'});

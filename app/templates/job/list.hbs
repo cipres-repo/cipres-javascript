@@ -1,0 +1,23 @@
+<div class="col-sm-5 col-sm-offset-2 col-md-5 col-md-offset-2">
+  <h2 class="page-header">Submitted Jobs</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+      	{{#each}}
+  	    	<tr>
+            <td>{{#link-to 'job.list.info' this classNames="more"}}{{selfuri.title}}{{/link-to}}</td>
+  	    	</tr>
+  	    {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="col-sm-5 col-sm-offset-7 col-md-5 col-md-offset-7" style="position:absolute">
+  {{outlet}}
+</div>
