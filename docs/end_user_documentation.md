@@ -1,4 +1,4 @@
-# Cipres Ember User Documentation
+# Cipres JavaScript Example-User Documentation
 
 Refer to this documenation for information regarding the use of this web application.
 
