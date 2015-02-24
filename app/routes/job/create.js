@@ -10,7 +10,6 @@ export default Ember.Route.extend({
 		return Ember.$.get('https://bumper.sdsc.edu/cipresrest/v1/tool').then(function(data) {
 			data = xml2json.parser(Ember.$(data).find('tools').html());
 			var arr = [];
-			console.log (data);
 			Ember.$.each(data.tool, function(index, tool) {
 				arr.push(tool.toolid);
 			});
