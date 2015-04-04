@@ -29,7 +29,8 @@ You will need the following things properly installed on your computer.
 
 ## Preparation
 
-* Register for a [CIPRES REST account](https://bumper.sdsc.edu/restusers/docs/guide.html;jsessionid=4B3813FEFA3E2D9D77144705B06A8E1C#Register)
+* Register for a [CIPRES REST account](http://www.phylo.org/restusers) and then register an application.
+	Choose DIRECT authentication and make a note of the application ID that is assigned.
 * Update `app/initializers/set-user.js` to include your CIPRES Application ID
 
 ## Running / Development
@@ -49,7 +50,7 @@ You will need the following things properly installed on your computer.
 
 ## Further Reading / Useful Links
 
-* CIPRES REST v1.1 Users Guide: https://bumper.sdsc.edu/restusers/docs/guide.html;jsessionid=4B3813FEFA3E2D9D77144705B06A8E1C
+* CIPRES REST Users Guide: http://www.phylo.org/restusers
 * ember: http://emberjs.com/
 * ember-cli: http://www.ember-cli.com/
 * Development Browser Extensions

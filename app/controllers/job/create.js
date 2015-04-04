@@ -68,7 +68,7 @@ export default Ember.ObjectController.extend({
 		    	withCredentials: true
 		    },
 		    success: function(data) {
-		    	data = xml2json.parser(Ember.$(data).find('jobstatus').html())
+		    	data = xml2json.parser(Ember.$(data).find('jobstatus').html());
 		    	self.set('alert', 'Successfully submitted a job! ' + data.selfuri.title);
 		    }
 			});
