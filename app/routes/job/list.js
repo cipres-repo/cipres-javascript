@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 		}
 	},
 	model: function() {
-		var url = 'https://bumper.sdsc.edu/cipresrest/v1/job/' +
+		var url = this.get('session.baseURL') + '/job/' +
 							this.get('session.username') + '?expand=true';
 		var auth = this.get('session.auth');
 		var appKey = this.get('session.appKey');
@@ -26,12 +26,16 @@ export default Ember.Route.extend({
 			data = xml2json.parser(Ember.$(data).find('jobs').html());
 			var objArr = [];
 			if (data.jobstatus) {
+				//wrap jobstatus in array if single jobstatus
+				if (typeof data.jobstatus === 'object')
+					data.jobstatus = [data.jobstatus];
 				Ember.$.each(data.jobstatus, function(index, job) {
 					var obj = {id: null, properties: [], metadata: [], messages: [], files: []};
 					var terminal = false;
 					var submitted = false;
 					for (var property in job) {
 				    if (job.hasOwnProperty(property)) {
+
 				    	switch (property) {
 				    		case "metadata":
 				    			Ember.$.each(job.metadata.entry, function(index, value) {

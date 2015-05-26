@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 		}
 	},
 	model: function() {
-		return Ember.$.get('https://bumper.sdsc.edu/cipresrest/v1/tool').then(function(data) {
+		return Ember.$.get(this.get('session.baseURL') + '/tool').then(function(data) {
 			data = xml2json.parser(Ember.$(data).find('tools').html());
 			var arr = [];
 			Ember.$.each(data.tool, function(index, tool) {

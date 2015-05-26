@@ -20,9 +20,12 @@ You will need the following things properly installed on your computer.
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
 
+For help installing Node.js and NPM without sudo priveleges, refer to the links
+provided under the Further Reading / Useful Links section.
+
 ## Installation
 
-* `git clone https://github.com/robreys/cipres-ember.git` this repository
+* `git clone https://github.com/cipres-repo/cipres-javascript` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -31,17 +34,12 @@ You will need the following things properly installed on your computer.
 
 * Register for a [CIPRES REST account](http://www.phylo.org/restusers) and then register an application.
 	Choose DIRECT authentication and make a note of the application ID that is assigned.
-* Update `app/initializers/set-user.js` to include your CIPRES Application ID
+* Update `public/api.json` to include your CIPRES Application ID, as well as the base url for the CIPRES REST API
 
 ## Running / Development
 
 * `ember server`
 * Visit your app at http://localhost:4200.
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
 
 ### Building
 
@@ -56,4 +54,6 @@ You will need the following things properly installed on your computer.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* General Node.js/NPM installation without sudo: http://www.wenincode.com/installing-node-jsnpm-without-sudo/
+* OSX Node.js/NPM installation without sudo (via Node Version Manager): https://learn.bevry.me/node/install
 

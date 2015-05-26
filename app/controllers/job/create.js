@@ -49,7 +49,7 @@ export default Ember.ObjectController.extend({
 			    }
 			  }
 			}
-			var url = 'https://bumper.sdsc.edu/cipresrest/v1/job/' +
+			var url = this.get('session.baseURL') + '/job/' +
 								this.get('session.username');
 			var auth = this.get('session.auth');
 			var appKey = this.get('session.appKey');

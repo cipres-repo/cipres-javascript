@@ -7,7 +7,7 @@ export default Ember.ObjectController.extend({
 	},
 	actions: {
 		login: function() {
-			var url = 'https://bumper.sdsc.edu/cipresrest/v1/job/' +
+			var url = this.get('session.baseURL') + '/job/' +
 								this.get('sessionControl.username');
 			var auth = btoa(this.get('sessionControl.username') + ":" + this.get('sessionControl.password'));
 			var appKey = this.get('session.appKey');

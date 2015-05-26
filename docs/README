@@ -15,36 +15,24 @@ for downloading of outputted files. However, this can be remedied through proper
 
 Prerequisites
 
-	You will need the following things properly installed on your computer.
-
-	* [Git](http://git-scm.com/)
-	* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
-
-## Installation
-
-	* `git clone https://github.com/robreys/cipres-ember.git` this repository
-	* change into the new directory
-	* `npm install`
-	* `bower install`
+	A local web server is all that is required to host the application. If you are unfamiliar with
+	creating a web server, you may use static site hosting services such as bitballoon (https://www.bitballoon.com/)
+	to host the application.
 
 Preparation
 
-	* Register for a [CIPRES REST account](https://bumper.sdsc.edu/restusers/docs/guide.html;jsessionid=4B3813FEFA3E2D9D77144705B06A8E1C#Register)
-	* Update `app/initializers/set-user.js` to include your CIPRES Application ID
+	* Register for a CIPRES REST account (http://www.phylo.org/restusers)
+	* Register a CIPRES REST application. Choose DIRECT authentication and make a note of the application ID that is assigned.
+	* Within cipres-ember.zip, Update the file `api.json` to include your CIPRES Application ID
 
 Running / Development
 
-	* `ember server`
-	* Visit your app at http://localhost:4200.
-
-Building
-
-	* `ember build` (development)
-	* `ember build --environment production` (production)
+	* If you are using a service such as bitballoon, upload your modified cipres-ember.zip file to the service.
+	* Otherwise, unzip the cipres-ember.zip file to the root of your local web server
 
 Further Reading / Useful Links
 
-	* CIPRES REST v1.1 Users Guide: https://bumper.sdsc.edu/restusers/docs/guide.html;jsessionid=4B3813FEFA3E2D9D77144705B06A8E1C
+	* CIPRES REST v1.1 Users Guide: http://www.phylo.org/restusers
 	* ember: http://emberjs.com/
 	* ember-cli: http://www.ember-cli.com/
 	* Development Browser Extensions

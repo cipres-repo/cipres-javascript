@@ -1,3 +1,4 @@
 {
-	"appKey": "YOUR APPLICATION ID"
+	"appKey": "YOUR APPLICATION ID",
+	"url": "BASE URL"
 }
